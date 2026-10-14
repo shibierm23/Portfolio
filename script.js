@@ -1,4 +1,6 @@
-﻿/* ================================================================
+﻿import { downloadResumePDF } from './resume.js';
+
+/* ================================================================
    SHIBIE R M - PORTFOLIO SCRIPTS
    Handles: mobile nav, scroll-spy, reveal on scroll, footer year
    ================================================================ */
@@ -120,3 +122,6 @@ if ('IntersectionObserver' in window && !reduceMotion) {
 
 const yearEl = document.getElementById('current-year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+const resumeDownload = document.getElementById('download-resume');
+if (resumeDownload) resumeDownload.addEventListener('click', downloadResumePDF);
